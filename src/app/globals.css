@@ -506,29 +506,167 @@ img {
 }
 
 /* About section image treatment */
-.about-image-frame {
+.about-premium {
+  position: relative;
   overflow: hidden;
-  border-radius: 2rem 0.75rem 2rem 0.75rem;
-  clip-path: polygon(8% 0, 100% 0, 88% 100%, 0 100%);
-  box-shadow: 16px 16px 0 rgba(7, 94, 255, 0.12);
+  padding: 7rem 1.25rem;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(7, 94, 255, 0.13), transparent 34%),
+    radial-gradient(circle at 88% 70%, rgba(122, 199, 12, 0.12), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f6f9ff 100%);
 }
 
-.about-image-frame img {
+.about-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 4.5rem;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+}
+
+.about-bg-logo {
+  position: absolute;
+  right: -5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.035;
+  pointer-events: none;
+}
+
+.about-bg-logo img {
+  width: 36rem;
+}
+
+.about-visual {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+  background: #020b1d;
+  box-shadow:
+    0 30px 90px rgba(2, 11, 29, 0.16),
+    0 0 0 1px rgba(7, 94, 255, 0.12);
+}
+
+.about-visual::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  background:
+    linear-gradient(135deg, rgba(7, 94, 255, 0.18), transparent 35%),
+    linear-gradient(315deg, rgba(122, 199, 12, 0.18), transparent 38%);
+}
+
+.about-visual img {
   width: 100%;
-  height: clamp(260px, 32vw, 430px);
+  height: 520px;
   object-fit: cover;
 }
 
-.watermark-logo {
+.about-floating-card {
   position: absolute;
-  right: 0;
-  top: 50%;
-  z-index: 0;
-  color: rgba(6, 18, 47, 0.035);
-  font-size: clamp(8rem, 22vw, 18rem);
-  font-weight: 800;
+  left: 1.7rem;
+  bottom: 1.7rem;
+  z-index: 3;
+  max-width: 15rem;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 1.25rem;
+  background: rgba(2, 11, 29, 0.78);
+  backdrop-filter: blur(18px);
+  color: #ffffff;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.about-floating-card strong {
+  display: block;
+  color: #7ac70c;
+  font-size: 2.4rem;
   line-height: 1;
-  transform: translateY(-50%);
+}
+
+.about-floating-card span {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.9rem;
+}
+
+.about-content {
+  position: relative;
+}
+
+.about-eyebrow {
+  color: #7ac70c;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.about-content h2 {
+  margin-top: 1rem;
+  color: #06122f;
+  font-size: clamp(2.4rem, 4vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.about-content h2 span {
+  color: #075eff;
+}
+
+.about-content > p:not(.about-eyebrow) {
+  margin-top: 1.5rem;
+  max-width: 38rem;
+  color: #5e6b82;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.about-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.4rem;
+}
+
+.about-points div {
+  padding: 1.15rem;
+  border: 1px solid rgba(7, 94, 255, 0.1);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 14px 40px rgba(15, 32, 60, 0.07);
+}
+
+.about-points strong {
+  display: block;
+  color: #06122f;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.about-points span {
+  display: block;
+  margin-top: 0.25rem;
+  color: #6b7280;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 1023px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-points {
+    grid-template-columns: 1fr;
+  }
+
+  .about-visual img {
+    height: 420px;
+  }
 }
 
 /* Services section background and controls */
