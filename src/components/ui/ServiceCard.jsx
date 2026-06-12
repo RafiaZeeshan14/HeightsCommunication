@@ -2,7 +2,7 @@ export default function ServiceCard({ service }) {
   const Icon = service.icon;
 
   return (
-    <article className="rounded-lg border border-white/10 bg-white/[0.035] p-6 shadow-xl shadow-black/10 transition hover:-translate-y-1 hover:border-[#7ac70c]/50">
+    <article className="min-h-[250px] rounded-lg border border-white/10 bg-white/[0.035] p-6 shadow-xl shadow-black/10 transition hover:-translate-y-1 hover:border-[#7ac70c]/50">
       <span className={`grid h-16 w-16 place-items-center rounded-full border border-current bg-white/[0.03] text-2xl ${service.color}`}>
         <Icon aria-hidden="true" />
       </span>

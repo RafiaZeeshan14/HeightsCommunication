@@ -22,7 +22,10 @@ export default function ClientsSection() {
             {advantages.map((advantage) => {
               const Icon = advantage.icon;
               return (
-                <article key={advantage.title} className="advantage-card">
+                <article
+                  key={advantage.title}
+                  className="grid min-h-32 grid-cols-[auto_1fr] items-center gap-5 rounded-md border border-[#e4ebf5] bg-white p-5 shadow-[0_18px_40px_rgba(15,32,60,0.08)]"
+                >
                   <span className={`text-5xl ${advantage.color}`}>
                     <Icon aria-hidden="true" />
                   </span>

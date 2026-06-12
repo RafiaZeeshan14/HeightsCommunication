@@ -17,7 +17,14 @@ import {
   FaUsers,
   FaYoutube,
 } from "react-icons/fa";
-import { HiOutlineSparkles } from "react-icons/hi2";
+import {
+  HiOutlineCursorArrowRays,
+  HiOutlineLightBulb,
+  HiOutlineMegaphone,
+  HiOutlineRocketLaunch,
+  HiOutlineSparkles,
+  HiOutlineUserGroup,
+} from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
 
 export const navItems = [
@@ -39,19 +46,33 @@ export const heroStats = [
 
 export const heroSlides = [
   {
-    title: "Outdoor Media",
+    title: "Outdoor Advertising",
+    text: "High-impact visibility that builds brand recognition.",
+    icon: HiOutlineMegaphone,
     image: "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?auto=format&fit=crop&w=900&q=80",
   },
   {
-    title: "Exhibitions",
+    title: "Brand Activations",
+    text: "Engaging experiences that create lasting connections.",
+    icon: HiOutlineCursorArrowRays,
     image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80",
   },
   {
-    title: "Events",
+    title: "Events & Experiences",
+    text: "Memorable events that inspire and engage.",
+    icon: HiOutlineUserGroup,
     image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=900&q=80",
   },
   {
-    title: "Road Shows",
+    title: "Creative Solutions",
+    text: "Innovative ideas that bring brands to life.",
+    icon: HiOutlineLightBulb,
+    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Strategic Campaigns",
+    text: "Data-driven strategies that deliver real results.",
+    icon: HiOutlineRocketLaunch,
     image: "https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=900&q=80",
   },
 ];
