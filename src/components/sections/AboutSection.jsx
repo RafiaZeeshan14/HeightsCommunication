@@ -92,7 +92,7 @@ export default function AboutSection() {
       <div className="about-blueprint-rings" aria-hidden="true" />
       <img
         className="about-blueprint-logo"
-        src="/logo.svg"
+        src="/abtlogo.svg"
         alt=""
         aria-hidden="true"
       />
@@ -205,7 +205,7 @@ export default function AboutSection() {
 
             <div className="relative z-10 flex flex-col items-center">
               <img
-                src="/logo.svg"
+                src="/abtlogo.svg"
                 alt="Heights Communications"
                 className="w-[250px] sm:w-[300px] lg:mt-4 lg:w-[340px]"
               />
