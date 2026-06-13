@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { services } from "@/data/site";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ServiceCard from "@/components/ui/ServiceCard";
@@ -9,15 +12,36 @@ export default function ServicesSection() {
         <div className="flex items-end justify-between gap-6">
           <SectionHeading eyebrow="What We Do" title="Our Services" dark />
           <div className="hidden gap-3 md:flex" aria-hidden="true">
-            <button className="slider-button">‹</button>
-            <button className="slider-button">›</button>
           </div>
         </div>
-        <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+        <motion.div
+          className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            hidden: {},
+            show: {
+              transition: { staggerChildren: 0.12 },
+            },
+          }}
+        >
           {services.map((service) => (
-            <ServiceCard key={service.title} service={service} />
+            <motion.div
+              key={service.title}
+              variants={{
+                hidden: { opacity: 0, y: 42 },
+                show: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.58, ease: "easeOut" },
+                },
+              }}
+            >
+              <ServiceCard service={service} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

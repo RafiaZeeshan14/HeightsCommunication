@@ -3,7 +3,7 @@ import {
   FaBullhorn,
   FaCalendarCheck,
   FaCamera,
-  FaCheck,
+  FaChartLine,
   FaEnvelope,
   FaFacebookF,
   FaGift,
@@ -41,7 +41,7 @@ export const heroStats = [
   { value: "18+", label: "Year Experience", icon: FaCalendarCheck },
   { value: "10000+", label: "Projects Delivered", icon: FaRocket },
   { value: "250+", label: "Brands Served", icon: FaUsers },
-  { value: "Nationwide", label: "Presence Across Pakistan", icon: IoLocationOutline },
+  // { value: "Nationwide", label: "Presence Across Pakistan", icon: IoLocationOutline },
 ];
 
 export const heroSlides = [
@@ -153,32 +153,45 @@ export const projects = [
   },
 ];
 
-export const clients = ["TOYOTA", "IMC", "SUZUKI", "Nestle", "Jazz", "LuckyOne", "Unilever"];
-
+export const clients = [
+  { name: "Toyota", logo: "/toyo.png" },
+  { name: "unilever", logo: "/unilever.png" },
+  { name: "telenor", logo: "/telenor.jpg" },
+  { name: "proton", logo: "/proton.jpg" },
+  { name: "hbl", logo: "/HBL.png" },
+  { name: "cococola", logo: "/cocola.png" },
+  { name: "suzuki", logo: "/suzuki.png" },
+  { name: "nestle", logo: "/nestle.png" },
+  { name: "eneos", logo: "/eneos.png" },
+];
 export const advantages = [
   {
-    title: "Strategic Planning",
-    text: "Insight-driven strategies that deliver real results.",
-    icon: FaBullseye,
-    color: "text-blue-500",
-  },
-  {
-    title: "Nationwide Reach",
-    text: "Wide network and presence across Pakistan.",
-    icon: IoLocationOutline,
-    color: "text-lime-500",
-  },
-  {
-    title: "Creative Excellence",
-    text: "Innovative ideas that make brands unforgettable.",
+    title: "19+ YEARS",
+    text: "Of delivering exceptional advertising solutions",
     icon: HiOutlineSparkles,
-    color: "text-purple-500",
+    color: "text-[#9be10c]",
+    accent: "lime",
   },
   {
-    title: "End-to-End Execution",
-    text: "From planning to execution, we handle everything.",
-    icon: FaCheck,
-    color: "text-orange-500",
+    title: "500+ CLIENTS",
+    text: "Trusted by brands across industries",
+    icon: HiOutlineUserGroup,
+    color: "text-[#4f83ff]",
+    accent: "blue",
+  },
+  {
+    title: "1000+ CAMPAIGNS",
+    text: "Successfully executed nationwide",
+    icon: FaBullseye,
+    color: "text-[#9be10c]",
+    accent: "lime",
+  },
+  {
+    title: "MEASURABLE RESULTS",
+    text: "Data-backed performance that drives growth",
+    icon: FaChartLine,
+    color: "text-[#35d3d2]",
+    accent: "cyan",
   },
 ];
 
