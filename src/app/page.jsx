@@ -12,16 +12,17 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="overflow-hidden">
+      <main className="overflow-hidden ">
         <HeroSection />
         <AboutSection />
         <ServicesSection />
         <PortfolioSection />
-        <ClientsSection />
         <InsightsSection />
         <ContactSection />
       </main>
+     
       <Footer />
+       {/* <ClientsSection /> */}
     </>
   );
 }

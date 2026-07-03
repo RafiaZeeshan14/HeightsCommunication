@@ -10,17 +10,16 @@ export default function ClientsSection() {
   return (
     <section
       id="clients"
-      className="soft-section overflow-hidden px-4 py-16 sm:px-6 lg:px-10 lg:py-20"
+      className="fixed bottom-0 left-0 right-0 z-50 px-4 py-8 backdrop-blur-md sm:px-6 lg:px-10 pointer-events-none"
     >
       <div className="mx-auto w-full max-w-[96rem]">
         <p className="text-center text-xs font-bold uppercase tracking-wide text-[#7ac70c]">
          trusted by 
         </p>
 
-        {/* Auto Loop Logos */}
-        <div className="relative mt-8 overflow-hidden">
+        <div className="mt-6">
           <motion.div
-            className="flex w-max items-center gap-12 py-4"
+            className="flex w-max items-center gap-12"
             animate={{
               x: ["0%", "-50%"],
             }}
@@ -33,19 +32,19 @@ export default function ClientsSection() {
             {loopClients.map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
-                className="flex shrink-0 items-center justify-center rounded-[1.75rem] bg-white/90 px-5 py-4 shadow-[0_18px_40px_rgba(15,32,60,0.08)]"
+                className="flex shrink-0 items-center justify-center pointer-events-auto"
               >
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-20 sm:h-24 md:h-28 w-auto max-w-[8rem] object-contain opacity-100 transition-all duration-300 hover:scale-105"
+                  className="h-16 sm:h-20 md:h-24 w-auto object-contain opacity-100 transition-all duration-300 hover:scale-105"
                 />
               </div>
             ))}
           </motion.div>
         </div>
 
-        <div className="mt-16">
+        <div className="hidden">
           <SectionHeading
             eyebrow="Why Choose Us"
             title="We Deliver More Than Just Campaigns"
