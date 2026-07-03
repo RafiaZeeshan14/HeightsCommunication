@@ -156,7 +156,7 @@ export const projects = [
 export const clients = [
   { name: "Toyota", logo: "/toyo.png" },
   { name: "unilever", logo: "/unilever.png" },
-  { name: "telenor", logo: "/telenor.jpg" },
+  { name: "telenor", logo: "/tele.jpg" },
   { name: "proton", logo: "/proton.jpg" },
   { name: "hbl", logo: "/HBL.png" },
   { name: "cococola", logo: "/cocola.png" },

@@ -20,7 +20,7 @@ export default function ClientsSection() {
         {/* Auto Loop Logos */}
         <div className="relative mt-8 overflow-hidden">
           <motion.div
-            className="flex w-max items-center gap-16"
+            className="flex w-max items-center gap-12 py-4"
             animate={{
               x: ["0%", "-50%"],
             }}
@@ -33,12 +33,12 @@ export default function ClientsSection() {
             {loopClients.map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
-                className="flex shrink-0 items-center justify-center"
+                className="flex shrink-0 items-center justify-center rounded-[1.75rem] bg-white/90 px-5 py-4 shadow-[0_18px_40px_rgba(15,32,60,0.08)]"
               >
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-12 w-auto object-contain opacity-80 transition-all duration-300 hover:scale-105 hover:opacity-100"
+                  className="h-20 sm:h-24 md:h-28 w-auto max-w-[8rem] object-contain opacity-100 transition-all duration-300 hover:scale-105"
                 />
               </div>
             ))}
