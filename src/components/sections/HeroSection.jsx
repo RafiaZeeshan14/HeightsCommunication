@@ -85,11 +85,12 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.h1
-            className="mx-auto mt-5 max-w-[360px] text-[44px] font-bold leading-[1.02] sm:max-w-2xl sm:text-6xl lg:mx-0 lg:text-7xl"
+            className="mx-auto mt-5 max-w-[360px] text-[44px] font-bold leading-[1.02] sm:max-w-2xl sm:text-6xl lg:mx-0 lg:text-5xl xl:text-7xl"
             variants={leftItem}
           >
             Advertising <br />
-            That Creates <span className="text-[#7ac70c]">Impact.</span>
+            <span className="whitespace-nowrap">That Creates</span> <br />
+            <span className="text-[#7ac70c]">Impact.</span>
           </motion.h1>
 
           <motion.p
@@ -113,7 +114,7 @@ export default function HeroSection() {
 
         {/* RIGHT CONTENT */}
         <motion.div
-          className="relative z-10 mx-auto min-h-[420px] w-full max-w-[380px] rounded-[32px] border border-white/10 bg-white/[0.03] p-4 shadow-[0_0_60px_rgba(37,99,235,0.12)] backdrop-blur-xl sm:max-w-[520px] lg:min-h-[570px] lg:max-w-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none lg:backdrop-blur-0"
+          className="relative z-10 mx-auto min-h-[420px] w-full max-w-[380px] rounded-[32px] border border-white/10 bg-white/[0.03] p-4 shadow-[0_0_60px_rgba(37,99,235,0.12)] sm:max-w-[520px] lg:min-h-[570px] lg:max-w-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none"
           variants={rightShowcase}
           initial="hidden"
           animate="show"

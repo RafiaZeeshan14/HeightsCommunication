@@ -510,6 +510,48 @@ img {
   right: -0.35rem;
 }
 
+/* Keep the desktop showcase inside its column on standard laptop widths. */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .hero-copy h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-showcase {
+    left: calc(50% - 3rem);
+    width: 62.5rem;
+    min-height: 600px;
+    transform: translate(-50%, -2.5rem) scale(0.68);
+    transform-origin: center;
+  }
+
+  .hero-showcase-callout > span:last-child > span {
+    font-size: 1.12rem;
+    line-height: 1.3;
+  }
+
+  .hero-showcase-callout small {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .hero-showcase-item-2 .hero-showcase-callout {
+    right: -14rem;
+    width: 9.5rem;
+  }
+
+  .hero-showcase-item-2 .hero-showcase-callout::before {
+    left: -4.6rem;
+    width: 3.8rem;
+  }
+
+  .hero-showcase-item-1 .hero-showcase-callout > *,
+  .hero-showcase-item-4 .hero-showcase-callout > *,
+  .hero-showcase-item-5 .hero-showcase-callout > * {
+    transform: translateX(1rem);
+  }
+
+}
+
 /* About section background */
 .about-blueprint {
   isolation: isolate;
