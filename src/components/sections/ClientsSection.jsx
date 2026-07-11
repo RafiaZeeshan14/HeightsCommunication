@@ -10,16 +10,12 @@ export default function ClientsSection() {
   return (
     <section
       id="clients"
-      className="fixed bottom-0 left-0 right-0 z-50 px-4 py-8 backdrop-blur-md sm:px-6 lg:px-10 pointer-events-none"
+      className="clients-loop-backdrop fixed z-50 px-4 py-3 sm:px-6 lg:px-10 pointer-events-none"
     >
       <div className="mx-auto w-full max-w-[96rem]">
-        <p className="text-center text-xs font-bold uppercase tracking-wide text-[#7ac70c]">
-         trusted by 
-        </p>
-
-        <div className="mt-6">
+        <div>
           <motion.div
-            className="flex w-max items-center gap-12"
+            className="flex w-max items-center gap-10"
             animate={{
               x: ["0%", "-50%"],
             }}
@@ -37,7 +33,15 @@ export default function ClientsSection() {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-16 sm:h-20 md:h-24 w-auto object-contain opacity-100 transition-all duration-300 hover:scale-105"
+                  className={`h-12 w-auto object-contain opacity-100 transition-all duration-300 hover:scale-105 sm:h-14 md:h-16 ${
+                    client.name === "Ghandhara"
+                      ? "client-logo-wide"
+                      : client.name === "outfitter"
+                        ? "client-logo-outfitter"
+                      : client.name === "DIB"
+                        ? "client-logo-compact"
+                        : ""
+                  }`}
                 />
               </div>
             ))}
