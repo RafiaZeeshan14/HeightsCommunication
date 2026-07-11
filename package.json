@@ -12,6 +12,7 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
+    "@fontsource/manrope": "^5.2.8",
     "@fontsource/poppins": "^5.2.7",
     "@tailwindcss/postcss": "^4.3.0",
     "framer-motion": "^12.40.0",

@@ -1,4 +1,3 @@
-import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import AboutSection from "@/components/sections/AboutSection";
 import ClientsSection from "@/components/sections/ClientsSection";
@@ -21,8 +20,7 @@ export default function Home() {
         <ContactSection />
       </main>
      
-      <Footer />
-       {/* <ClientsSection /> */}
+      {/* <ClientsSection />  */}
     </>
   );
 }

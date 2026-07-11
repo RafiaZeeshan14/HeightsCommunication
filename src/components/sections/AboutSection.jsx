@@ -2,255 +2,153 @@
 
 import { motion } from "framer-motion";
 import {
-  FiTarget,
-  FiEye,
-  FiUsers,
+  FiAward,
+  FiBarChart2,
   FiCalendar,
+  FiEdit3,
+  FiGlobe,
   FiMapPin,
+  FiPieChart,
+  FiSettings,
+  FiSmile,
+  FiTarget,
+  FiUsers,
 } from "react-icons/fi";
-import { BsRocketTakeoff } from "react-icons/bs";
+import { BsInfinity } from "react-icons/bs";
+
+const cards = [
+  {
+    icon: FiCalendar,
+    title: "SINCE 2007",
+    text: "Over 19 years of experience in delivering exceptional advertising solutions.",
+    tone: "lime",
+  },
+  {
+    icon: FiUsers,
+    title: "500+ CAMPAIGNS",
+    text: "Successfully executed campaigns across diverse industries with lasting impact.",
+    tone: "blue",
+  },
+  {
+    icon: FiMapPin,
+    title: "NATIONWIDE REACH",
+    text: "Strong presence across Pakistan with an extensive media network.",
+    tone: "lime",
+  },
+  {
+    icon: BsInfinity,
+    title: "END-TO-END SOLUTIONS",
+    text: "From strategy to execution, we handle everything to deliver measurable results.",
+    tone: "purple",
+  },
+];
+
+const stats = [
+  { icon: FiSmile, value: "200+", label: "Happy Clients", sub: "Across Pakistan", tone: "lime" },
+  { icon: FiPieChart, value: "500+", label: "Successful", sub: "Campaigns", tone: "blue" },
+  { icon: FiAward, value: "19+", label: "Years of", sub: "Excellence", tone: "purple" },
+  { icon: FiGlobe, value: "30+", label: "Cities", sub: "Covered", tone: "lime" },
+];
+
+const tones = {
+  lime: { text: "text-lime-600", border: "bg-lime-500", soft: "bg-lime-50", ring: "border-lime-200" },
+  blue: { text: "text-blue-600", border: "bg-blue-600", soft: "bg-blue-50", ring: "border-blue-200" },
+  purple: { text: "text-purple-600", border: "bg-purple-600", soft: "bg-purple-50", ring: "border-purple-200" },
+};
+
+const orbitItems = [
+  { label: "STRATEGY", icon: FiTarget, className: "left-1/2 top-0 -translate-x-1/2", tone: "lime" },
+  { label: "IDEA", icon: FiTarget, className: "left-0 top-[36%]", tone: "blue" },
+  { label: "CREATIVE", icon: FiEdit3, className: "right-0 top-[36%]", tone: "lime" },
+  { label: "EXECUTION", icon: FiSettings, className: "bottom-0 left-[14%]", tone: "purple" },
+  { label: "RESULTS", icon: FiBarChart2, className: "bottom-0 right-[14%]", tone: "purple" },
+];
 
 export default function AboutSection() {
-  const purposeItems = [
-    {
-      icon: <FiTarget />,
-      title: "Our Mission",
-      text: "To create meaningful communication that builds strong brands and lasting connections.",
-      color: "text-lime-600",
-      border: "border-lime-500/30",
-      bg: "bg-lime-50",
-    },
-    {
-      icon: <FiEye />,
-      title: "Our Vision",
-      text: "To be the most trusted and innovative advertising partner across every platform and region.",
-      color: "text-blue-600",
-      border: "border-blue-500/30",
-      bg: "bg-blue-50",
-    },
-    {
-      icon: <FiUsers />,
-      title: "Our Values",
-      text: "Integrity, Innovation, Collaboration and Excellence in everything we do.",
-      color: "text-purple-600",
-      border: "border-purple-500/30",
-      bg: "bg-purple-50",
-    },
-  ];
-
-  const cards = [
-    {
-      icon: <FiCalendar />,
-      title: "SINCE 2007",
-      text: "Over 19 years of experience in delivering exceptional advertising solutions.",
-      color: "lime",
-    },
-    {
-      icon: <FiUsers />,
-      title: "500+ CAMPAIGNS",
-      text: "Successfully executed campaigns across diverse industries.",
-      color: "blue",
-    },
-    {
-      icon: <FiMapPin />,
-      title: "NATIONWIDE REACH",
-      text: "Strong presence across Pakistan with extensive media network.",
-      color: "lime",
-    },
-    {
-      icon: <BsRocketTakeoff />,
-      title: "END-TO-END SOLUTIONS",
-      text: "From strategy and creative to execution and evaluation, we handle it all.",
-      color: "purple",
-    },
-  ];
-
-  const colorMap = {
-    lime: {
-      text: "text-lime-600",
-      border: "border-lime-500/30",
-      glow: "shadow-[0_15px_45px_rgba(132,204,22,0.10)]",
-      dot: "bg-lime-500 shadow-[0_0_25px_#84cc16]",
-    },
-    blue: {
-      text: "text-blue-600",
-      border: "border-blue-500/30",
-      glow: "shadow-[0_15px_45px_rgba(59,130,246,0.08)]",
-      dot: "bg-blue-500 shadow-[0_0_25px_#3b82f6]",
-    },
-    purple: {
-      text: "text-purple-600",
-      border: "border-purple-500/30",
-      glow: "shadow-[0_15px_45px_rgba(168,85,247,0.08)]",
-      dot: "bg-purple-500 shadow-[0_0_25px_#a855f7]",
-    },
-  };
-
   return (
-    <section className="about-blueprint relative overflow-hidden bg-white py-16 text-slate-900 sm:py-20 lg:py-24">
-      <div className="about-blueprint-grid" aria-hidden="true" />
-      <div className="about-blueprint-rings" aria-hidden="true" />
-      <img
-        className="about-blueprint-logo"
-        src="/abtlogo.svg"
-        alt=""
-        aria-hidden="true"
-      />
+    <section id="about" className="about-reference relative overflow-hidden bg-white py-14 text-slate-950 lg:py-20">
+      <div className="about-reference-grid absolute inset-0" aria-hidden="true" />
 
-      <div className="relative mx-auto max-w-[1800px] px-5 sm:px-8 lg:px-10">
-        <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.2fr_0.95fr] lg:gap-14">
-          {/* LEFT */}
+      <div className="relative mx-auto max-w-[1800px] px-5 sm:px-8 lg:px-12">
+        <div className="grid items-center gap-12 xl:grid-cols-[0.86fr_1.18fr_0.9fr] xl:gap-8 2xl:gap-12">
           <motion.div
-            initial={{ opacity: 0, x: -45 }}
+            initial={{ opacity: 0, x: -35 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="max-w-full"
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="mb-5 flex items-center gap-4">
-              <span className="text-xs font-bold tracking-[0.35em] text-lime-600 sm:text-sm">
-                ABOUT US
-              </span>
-              <span className="h-[2px] w-20 bg-gradient-to-r from-lime-500 to-blue-500 sm:w-24" />
+            <div className="flex items-center gap-4 text-xs font-extrabold tracking-[0.32em] text-lime-600 sm:text-sm">
+              ABOUT US
+              <span className="h-0.5 w-16 bg-blue-600" />
             </div>
 
-            <h2 className="w-full max-w-[560px] text-[42px] font-extrabold leading-[1.08] text-slate-900 sm:text-5xl lg:w-[500px]">
-              Driven by Purpose.
-              <br />
-              <span className="text-lime-600">Built for Impact.</span>
+            <h2 className="mt-8 text-[42px] font-extrabold leading-[1.12] sm:text-5xl xl:text-[46px] 2xl:text-[54px]">
+              Driven by Purpose.<br />
+              Built for <span className="text-lime-600">Impact.</span>
             </h2>
 
-            <p className="mt-6 max-w-[560px] text-[15px] leading-8 text-slate-600 sm:mt-7">
-              Since 2007, Heights Communications has been a trusted partner for
-              brands that want to be seen, heard, and remembered. We blend
-              creativity, strategy, and execution to build powerful campaigns
-              that deliver real results.
+            <div className="mt-8 h-[3px] w-20 bg-blue-600" />
+
+            <p className="mt-8 max-w-[520px] text-[15px] leading-8 text-slate-600">
+              Since 2007, Heights Communications has empowered brands to stand out,
+              connect deeply, and grow fearlessly. We blend creativity, strategy,
+              and flawless execution to deliver advertising that drives real results.
             </p>
 
-            <div className="mt-7 h-[3px] w-20 bg-lime-500 sm:mt-8" />
-
-            <div className="mt-8 space-y-6">
-              {purposeItems.map((item, index) => (
-                <div key={index} className="flex items-start gap-4 sm:gap-5">
-                  <div
-                    className={`flex h-13 w-13 shrink-0 items-center justify-center rounded-xl border ${item.border} ${item.bg} ${item.color} text-2xl shadow-[0_12px_30px_rgba(15,23,42,0.08)] sm:h-14 sm:w-14`}
-                  >
-                    {item.icon}
-                  </div>
-
-                  <div className="max-w-[520px]">
-                    <h4 className={`text-lg font-bold ${item.color}`}>
-                      {item.title}
-                    </h4>
-                    <p className="mt-1 text-sm leading-6 text-slate-600">
-                      {item.text}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </motion.div>
 
-          {/* CENTER */}
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative flex min-h-[430px] items-center justify-center overflow-hidden sm:min-h-[520px] lg:min-h-[610px]"
+            transition={{ duration: 1.05, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+            className="relative mx-auto aspect-square w-full max-w-[590px]"
           >
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              className="absolute h-[310px] w-[310px] rounded-full border border-lime-400/20 sm:h-[390px] sm:w-[390px] lg:top-[70px] lg:h-[440px] lg:w-[440px]"
-            />
-
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 36, repeat: Infinity, ease: "linear" }}
-              className="absolute h-[250px] w-[250px] rounded-full border border-lime-400/30 sm:h-[320px] sm:w-[320px] lg:top-[110px] lg:h-[360px] lg:w-[360px]"
-            />
-
-            <motion.div
-              animate={{ scale: [1, 1.08, 1], opacity: [0.35, 0.75, 0.35] }}
-              transition={{
-                duration: 4.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute h-[230px] w-[230px] rounded-full bg-gradient-to-r from-blue-500/15 via-lime-500/25 to-blue-500/10 blur-[70px] sm:h-[300px] sm:w-[300px] lg:h-[330px] lg:w-[330px]"
-            />
-
-            <span className="about-orbit-label about-orbit-label-strategy absolute top-[50px] text-xs font-extrabold text-lime-600 sm:top-[70px] sm:text-sm lg:top-[83px]">
-              STRATEGY
-            </span>
-            <span className="about-orbit-label about-orbit-label-idea absolute left-1 top-[195px] text-xs font-extrabold text-blue-600 sm:left-[35px] sm:top-[245px] sm:text-sm lg:left-[42px] lg:top-[270px]">
-              IDEA
-            </span>
-            <span className="about-orbit-label about-orbit-label-creative absolute right-1 top-[195px] text-xs font-extrabold text-lime-600 sm:right-[28px] sm:top-[245px] sm:text-sm lg:right-[34px] lg:top-[270px]">
-              CREATIVE
-            </span>
-            <span className="about-orbit-label about-orbit-label-execution absolute bottom-[92px] left-[35px] text-xs font-extrabold text-blue-600 sm:bottom-[125px] sm:left-[70px] sm:text-sm lg:bottom-[155px] lg:left-[72px]">
-              EXECUTION
-            </span>
-            <span className="about-orbit-label about-orbit-label-results absolute bottom-[92px] right-[35px] text-xs font-extrabold text-purple-600 sm:bottom-[125px] sm:right-[70px] sm:text-sm lg:bottom-[155px] lg:right-[75px]">
-              RESULTS
-            </span>
-
-            <div className="about-orbit-dot about-orbit-dot-strategy absolute top-[82px] h-3 w-3 rounded-full bg-lime-500 shadow-[0_0_28px_#84cc16] sm:top-[112px] sm:h-4 sm:w-4 lg:top-[125px]" />
-            <div className="about-orbit-dot about-orbit-dot-idea absolute left-[45px] top-[205px] h-3 w-3 rounded-full bg-blue-500 shadow-[0_0_28px_#3b82f6] sm:left-[75px] sm:top-[260px] sm:h-4 sm:w-4 lg:left-[88px] lg:top-[292px]" />
-            <div className="about-orbit-dot about-orbit-dot-creative absolute right-[45px] top-[205px] h-3 w-3 rounded-full bg-lime-500 shadow-[0_0_28px_#84cc16] sm:right-[75px] sm:top-[260px] sm:h-4 sm:w-4 lg:right-[92px] lg:top-[292px]" />
-            <div className="about-orbit-dot about-orbit-dot-execution absolute bottom-[125px] left-[75px] h-3 w-3 rounded-full bg-blue-500 shadow-[0_0_28px_#3b82f6] sm:bottom-[165px] sm:left-[108px] sm:h-4 sm:w-4 lg:bottom-[195px] lg:left-[115px]" />
-            <div className="about-orbit-dot about-orbit-dot-results absolute bottom-[125px] right-[75px] h-3 w-3 rounded-full bg-purple-500 shadow-[0_0_28px_#a855f7] sm:bottom-[165px] sm:right-[115px] sm:h-4 sm:w-4 lg:bottom-[195px] lg:right-[125px]" />
-
-            <div className="relative z-10 flex flex-col items-center">
-              <img
-                src="/abtlogo.svg"
-                alt="Heights Communications"
-                className="w-[250px] sm:w-[300px] lg:mt-4 lg:w-[340px]"
-              />
-
-              <div className="mt-3 h-[54px] w-[320px] max-w-[88vw] rounded-[50%] bg-gradient-to-r from-blue-500/10 via-lime-400/20 to-blue-500/10 ring-1 ring-lime-400/20 sm:mt-5 sm:h-[70px] sm:w-[400px] lg:mt-6 lg:h-[82px] lg:w-[450px]" />
+            <div className="absolute inset-[9%] rounded-full border border-lime-400/50" />
+            <div className="absolute inset-[18%] rounded-full border border-dashed border-blue-300/60" />
+            <div className="absolute inset-[27%] rounded-full border border-slate-200 shadow-[0_25px_80px_rgba(37,99,235,0.13)]" />
+            <div className="absolute inset-[30%] flex items-center justify-center rounded-full bg-white shadow-[0_20px_55px_rgba(15,23,42,0.14)]">
+              <img src="/abtlogo.svg" alt="Heights Communications" className="w-[82%]" />
             </div>
+
+            {orbitItems.map(({ label, icon: Icon, className, tone }) => {
+              const theme = tones[tone];
+              return (
+                <div key={label} className={`absolute flex flex-col items-center gap-1.5 ${className}`}>
+                  <span className={`text-[11px] font-extrabold sm:text-sm ${theme.text}`}>{label}</span>
+                  <span className={`flex h-11 w-11 items-center justify-center rounded-full text-xl text-white shadow-lg sm:h-13 sm:w-13 ${theme.border}`}>
+                    <Icon />
+                  </span>
+                </div>
+              );
+            })}
           </motion.div>
 
-          {/* RIGHT */}
           <motion.div
-            initial={{ opacity: 0, x: 45 }}
+            initial={{ opacity: 0, x: 35 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="grid gap-5 sm:grid-cols-2 lg:block lg:space-y-6"
+            transition={{ duration: 0.9, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
+            className="grid gap-5 sm:grid-cols-2 xl:grid-cols-1"
           >
-            {cards.map((card, index) => {
-              const theme = colorMap[card.color];
-
+            {cards.map(({ icon: Icon, title, text, tone }, index) => {
+              const theme = tones[tone];
               return (
                 <motion.div
-                  key={index}
-                  whileHover={{ y: -6 }}
-                  transition={{ duration: 0.25 }}
-                  className={`relative rounded-[22px] border ${theme.border} bg-white/90 p-5 backdrop-blur-xl ${theme.glow} sm:p-6 lg:min-h-[132px] lg:rounded-[24px] lg:p-7`}
+                  key={title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7, delay: 0.24 + index * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                  className="relative min-h-[132px] overflow-hidden rounded-2xl bg-white p-4 shadow-[0_12px_42px_rgba(15,23,42,0.09)] ring-1 ring-slate-100"
                 >
-                  <div className="absolute left-[-70px] top-1/2 hidden h-px w-16 bg-gradient-to-r from-transparent to-slate-300 lg:block" />
-                  <div
-                    className={`absolute left-[-76px] top-1/2 hidden h-2 w-2 -translate-y-1/2 rounded-full ${theme.dot} lg:block`}
-                  />
-
-                  <div className="flex items-center gap-4 sm:gap-5 lg:gap-6">
-                    <div
-                      className={`flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-full border ${theme.border} ${theme.text} text-2xl sm:h-[70px] sm:w-[70px] sm:text-3xl lg:h-[76px] lg:w-[76px]`}
-                    >
-                      {card.icon}
-                    </div>
-
-                    <div className="pr-0 lg:pr-5">
-                      <h3 className={`text-lg font-extrabold ${theme.text}`}>
-                        {card.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-6 text-slate-600">
-                        {card.text}
-                      </p>
+                  <div className="flex h-full items-center gap-4">
+                    <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full border text-2xl ${theme.soft} ${theme.ring} ${theme.text}`}>
+                      <Icon />
+                    </span>
+                    <div>
+                      <h3 className={`text-lg font-extrabold ${theme.text}`}>{title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -258,6 +156,35 @@ export default function AboutSection() {
             })}
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 36, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          className="about-stats-glass mt-12 grid overflow-hidden rounded-2xl sm:grid-cols-2 xl:grid-cols-4"
+        >
+          {stats.map(({ icon: Icon, value, label, sub, tone }, index) => {
+            const theme = tones[tone];
+            return (
+              <motion.div
+                key={value + label}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.65, delay: 0.2 + index * 0.14, ease: [0.22, 1, 0.36, 1] }}
+                className="flex items-center gap-4 border-b border-slate-200 p-5 sm:odd:border-r xl:border-b-0 xl:border-r xl:last:border-r-0"
+              >
+                <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-2xl ${theme.soft} ${theme.text}`}><Icon /></span>
+                <div>
+                  <strong className={`text-3xl font-extrabold ${theme.text}`}>{value}</strong>
+                  <p className="text-sm font-semibold text-slate-700">{label}</p>
+                  <p className="text-xs text-slate-500">{sub}</p>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </div>
     </section>
   );
