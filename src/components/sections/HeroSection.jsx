@@ -114,12 +114,12 @@ export default function HeroSection() {
 
         {/* RIGHT CONTENT */}
         <motion.div
-          className="relative z-10 mx-auto min-h-[420px] w-full max-w-[380px] rounded-[32px] border border-white/10 bg-white/[0.03] p-4 shadow-[0_0_60px_rgba(37,99,235,0.12)] sm:max-w-[520px] lg:min-h-[570px] lg:max-w-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none"
+          className="hero-showcase-shell relative z-10 mx-auto min-h-[420px] w-full max-w-[380px] rounded-[32px] border border-white/10 bg-white/[0.03] p-4 shadow-[0_0_60px_rgba(37,99,235,0.12)] sm:max-w-[520px] lg:min-h-[570px] lg:max-w-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none"
           variants={rightShowcase}
           initial="hidden"
           animate="show"
         >
-          <div className="absolute inset-0 rounded-[32px] bg-[radial-gradient(circle_at_50%_45%,rgba(122,199,12,0.12),transparent_55%)] lg:hidden" />
+          <div className="hero-showcase-mobile-glow absolute inset-0 rounded-[32px] bg-[radial-gradient(circle_at_50%_45%,rgba(122,199,12,0.12),transparent_55%)] lg:hidden" />
           <div className="relative h-full">
             <HeroShowcase items={heroSlides} />
           </div>
@@ -128,7 +128,7 @@ export default function HeroSection() {
 
       {/* STATS */}
       <motion.div
-        className="relative z-10 mt-10 w-full border-t border-white/15 pt-7 lg:mt-10"
+        className="hero-stats relative z-10 mt-10 w-full border-t border-white/15 pt-7 lg:mt-10"
         variants={statsParent}
         initial="hidden"
         animate="show"

@@ -68,7 +68,7 @@ export default function ServicesSection() {
                 whileHover={{ y: -7 }}
                 className="service-premium-card group"
               >
-                <span className="absolute right-8 top-5 text-5xl font-extrabold text-white/[0.075]">
+                <span className="absolute right-8 top-5 hidden text-5xl font-extrabold text-white/[0.075] sm:block">
                   {String(index + 1).padStart(2, "0")}
                 </span>
 

@@ -162,7 +162,7 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="about-stats-glass mt-12 grid overflow-hidden rounded-2xl sm:grid-cols-2 xl:grid-cols-4"
+          className="about-stats-glass mt-12 grid grid-cols-2 overflow-hidden rounded-2xl xl:grid-cols-4"
         >
           {stats.map(({ icon: Icon, value, label, sub, tone }, index) => {
             const theme = tones[tone];
@@ -173,7 +173,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.65, delay: 0.2 + index * 0.14, ease: [0.22, 1, 0.36, 1] }}
-                className="flex items-center gap-4 border-b border-slate-200 p-5 sm:odd:border-r xl:border-b-0 xl:border-r xl:last:border-r-0"
+                className="about-stat-item flex items-center gap-4 border-slate-200 p-5 xl:border-r xl:last:border-r-0"
               >
                 <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-2xl ${theme.soft} ${theme.text}`}><Icon /></span>
                 <div>
