@@ -175,7 +175,7 @@ export const clients = [
   { name: "bmw", logo: "/bmw.jpg" },
   { name: "chery", logo: "/chery.png" },
   { name: "dongfeng", logo: "/dongfeng.jpg" },
-  { name: "sp", logo: "/sp.png" },
+  { name: "sindh police", logo: "/sp.png" },
   { name: "standard", logo: "/standard.png" },
   { name: "emirates", logo: "/emirates.png" },
   { name: "psl", logo: "/psl.jpg" },
@@ -183,6 +183,9 @@ export const clients = [
   { name: "outfitter", logo: "/outfitter.png" },
   { name: "punjab police", logo: "/pp.png" },
   { name: "tdcp", logo: "/tdcp.png" },
+  { name: "m9", logo: "/m9.jpg" },
+  { name: "ccl", logo: "/ccl.png" },
+  { name: "interwood", logo: "/interwood.jpg" },
 ];
 export const advantages = [
   {
@@ -222,7 +225,7 @@ export const contactDetails = [
 ];
 
 export const socialLinks = [
-  { label: "Facebook", icon: FaFacebookF, href: "#" },
+  { label: "Facebook", icon: FaFacebookF, href: "https://www.facebook.com/HeightsCommunications" },
   { label: "LinkedIn", icon: FaLinkedinIn, href: "#" },
   { label: "Instagram", icon: FaInstagram, href: "#" },
   { label: "YouTube", icon: FaYoutube, href: "#" },

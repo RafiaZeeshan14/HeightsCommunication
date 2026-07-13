@@ -11,7 +11,7 @@ export default function Footer() {
           <a href="#">Sitemap</a>
         </div>
         <div className="flex items-center gap-3">
-          {socialLinks.map((link) => {
+          {/* {socialLinks.map((link) => {
             const Icon = link.icon;
 
             return (
@@ -24,7 +24,7 @@ export default function Footer() {
                 <Icon aria-hidden="true" />
               </a>
             );
-          })}
+          })} */}
         </div>
       </div>
     </footer>

@@ -40,6 +40,39 @@ select {
   font: inherit;
 }
 
+.back-to-top {
+  position: fixed;
+  right: clamp(1rem, 2.5vw, 2.5rem);
+  bottom: 7.5rem;
+  z-index: 100;
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border: 1px solid rgba(122, 199, 12, 0.6);
+  border-radius: 999px;
+  color: #9be10c;
+  background: rgba(2, 11, 29, 0.86);
+  box-shadow: 0 12px 34px rgba(2, 11, 29, 0.3), 0 0 20px rgba(122, 199, 12, 0.12);
+  backdrop-filter: blur(14px);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.75rem);
+  transition: opacity 220ms ease, transform 220ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.back-to-top-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  border-color: #9be10c;
+  background: rgba(122, 199, 12, 0.14);
+}
+
 img {
   display: block;
   max-width: 100%;

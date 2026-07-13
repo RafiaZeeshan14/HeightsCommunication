@@ -1,4 +1,5 @@
 import Header from "@/components/layout/Header";
+import BackToTop from "@/components/ui/BackToTop";
 import AboutSection from "@/components/sections/AboutSection";
 import ClientsSection from "@/components/sections/ClientsSection";
 import ContactSection from "@/components/sections/ContactSection";
@@ -19,8 +20,8 @@ export default function Home() {
         <InsightsSection />
         <ContactSection />
       </main>
-     
-       <ClientsSection />  
+      <BackToTop />
+      <ClientsSection />
     </>
   );
 }
