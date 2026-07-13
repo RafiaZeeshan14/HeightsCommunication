@@ -184,6 +184,8 @@ export const clients = [
   { name: "m9", logo: "/m9.jpg" },
   { name: "ccl", logo: "/ccl.png" },
   { name: "interwood", logo: "/interwood.jpg" },
+  { name: "adamjee", logo: "/adamjee.png" },
+  { name: "yd", logo: "/yd.jpg" },
 ];
 export const advantages = [
   {
