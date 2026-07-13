@@ -32,8 +32,6 @@ export const navItems = [
   { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "Clients", href: "#clients" },
-  { label: "Blog", href: "#insights" },
   { label: "Contact Us", href: "#contact" },
 ];
 
@@ -219,16 +217,16 @@ export const advantages = [
 ];
 
 export const contactDetails = [
-  { icon: FaPhoneAlt, lines: ["0333 1234567", "051 2345678"] },
+  { icon: FaPhoneAlt, lines: [ "+92 323 2779999"] },
   { icon: FaEnvelope, lines: ["info@heights.com.pk"] },
   { icon: FaMapMarkerAlt, lines: ["Office # 12, 2nd Floor,", "Blue Area, Islamabad"] },
 ];
 
-export const socialLinks = [
-  { label: "Facebook", icon: FaFacebookF, href: "https://www.facebook.com/HeightsCommunications" },
-  { label: "LinkedIn", icon: FaLinkedinIn, href: "#" },
-  { label: "Instagram", icon: FaInstagram, href: "#" },
-  { label: "YouTube", icon: FaYoutube, href: "#" },
-];
+// export const socialLinks = [
+//   { label: "Facebook", icon: FaFacebookF, href: "https://www.facebook.com/HeightsCommunications" },
+//   { label: "LinkedIn", icon: FaLinkedinIn, href: "#" },
+//   { label: "Instagram", icon: FaInstagram, href: "#" },
+//   { label: "YouTube", icon: FaYoutube, href: "#" },
+// ];
 
 export { FaArrowRight };

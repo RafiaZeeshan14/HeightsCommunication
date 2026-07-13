@@ -38,7 +38,7 @@ export default function ContactSection() {
             <a className="transition hover:text-white" href="#">Sitemap</a>
           </div>
 
-          <div className="mt-7 flex items-center gap-3">
+          {/* <div className="mt-7 flex items-center gap-3">
             {socialLinks.map((link) => {
               const Icon = link.icon;
               return (
@@ -52,10 +52,10 @@ export default function ContactSection() {
                 </a>
               );
             })}
-          </div>
+          </div> */}
 
           <p className="mt-7 text-xs leading-5 text-white/45">
-            &copy; 2024 Heights Communications.<br />All Rights Reserved.
+            &copy; 2026 Heights Communications.<br />All Rights Reserved.
           </p>
         </div>
       </div>

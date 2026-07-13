@@ -6,11 +6,12 @@ const variants = {
   light: "border border-[#0d62ff] bg-white text-[#075eff] hover:bg-[#eef5ff]",
 };
 
-export default function ButtonLink({ children, href = "#", variant = "primary", icon = true, className = "" }) {
+export default function ButtonLink({ children, href = "#", variant = "primary", icon = true, className = "", ...props }) {
   return (
     <a
       className={`inline-flex h-12 items-center justify-center gap-3 rounded-md px-6 text-sm font-semibold transition ${variants[variant]} ${className}`}
       href={href}
+      {...props}
     >
       {children}
       {icon && <FaArrowRight aria-hidden="true" className="text-xs" />}

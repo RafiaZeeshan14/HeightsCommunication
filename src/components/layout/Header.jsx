@@ -21,7 +21,9 @@ export default function Header() {
     </nav>
 
     <ButtonLink
-      href="#contact"
+      href="https://wa.me/923232779999"
+      target="_blank"
+      rel="noopener noreferrer"
       className="h-11 px-5 text-sm sm:inline-flex lg:h-12 lg:px-6"
     >
       Get A Quote
