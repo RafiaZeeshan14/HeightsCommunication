@@ -1,12 +1,7 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { advantages, clients } from "@/data/site";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function ClientsSection() {
-  const loopClients = [...clients, ...clients];
-
   return (
     <section
       id="clients"
@@ -14,38 +9,38 @@ export default function ClientsSection() {
     >
       <div className="mx-auto w-full max-w-[96rem]">
         <div>
-          <motion.div
-            className="flex w-max items-center gap-10"
-            animate={{
-              x: ["0%", "-50%"],
-            }}
-            transition={{
-              duration: 25,
-              ease: "linear",
-              repeat: Infinity,
-            }}
-          >
-            {loopClients.map((client, index) => (
+          <div className="clients-logo-track">
+            {[false, true].map((duplicate) => (
               <div
-                key={`${client.name}-${index}`}
-                className="flex shrink-0 items-center justify-center pointer-events-auto"
+                key={duplicate ? "duplicate" : "primary"}
+                className="clients-logo-list"
+                aria-hidden={duplicate || undefined}
               >
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className={`h-12 w-auto object-contain opacity-100 transition-all duration-300 hover:scale-105 sm:h-14 md:h-16 ${
-                    client.name === "Ghandhara"
-                      ? "client-logo-wide"
-                      : client.name === "outfitter"
-                        ? "client-logo-outfitter"
-                      : client.name === "DIB"
-                        ? "client-logo-compact"
-                        : ""
-                  }`}
-                />
+                {clients.map((client) => (
+                  <div
+                    key={client.name}
+                    className="flex shrink-0 items-center justify-center pointer-events-auto"
+                  >
+                    <img
+                      src={client.logo}
+                      alt={duplicate ? "" : client.name}
+                      decoding="async"
+                      draggable="false"
+                      className={`h-12 w-auto object-contain opacity-100 transition-transform duration-300 hover:scale-105 sm:h-14 md:h-16 ${
+                        client.name === "Ghandhara"
+                          ? "client-logo-wide"
+                          : client.name === "outfitter"
+                            ? "client-logo-outfitter"
+                          : client.name === "DIB"
+                            ? "client-logo-compact"
+                            : ""
+                      }`}
+                    />
+                  </div>
+                ))}
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
         <div className="hidden">

@@ -108,7 +108,7 @@ img {
   background:
     linear-gradient(90deg, rgba(2, 11, 29, 0.97) 0%, rgba(2, 11, 29, 0.9) 42%, rgba(2, 11, 29, 0.58) 100%),
     radial-gradient(circle at 28% 54%, rgba(7, 94, 255, 0.14), transparent 34%),
-    url("/bghero.png") center / cover no-repeat,
+    url("/bghero.webp") center / cover no-repeat,
     #020b1d;
 }
 
@@ -715,8 +715,8 @@ img {
     0 20px 55px rgba(15, 23, 42, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.95),
     0 0 0 1px rgba(148, 163, 184, 0.16);
-  backdrop-filter: blur(24px) saturate(115%);
-  -webkit-backdrop-filter: blur(24px) saturate(115%);
+  backdrop-filter: blur(16px) saturate(110%);
+  -webkit-backdrop-filter: blur(16px) saturate(110%);
 }
 
 .about-stats-glass::before {
@@ -1001,7 +1001,7 @@ img {
   background:
     linear-gradient(90deg, rgba(2, 11, 29, 0.97) 0%, rgba(2, 11, 29, 0.9) 42%, rgba(2, 11, 29, 0.58) 100%),
     radial-gradient(circle at 28% 54%, rgba(7, 94, 255, 0.14), transparent 34%),
-    url("/bghero.png") center / cover no-repeat,
+    url("/bghero.webp") center / cover no-repeat,
     #020b1d;
 }
 
@@ -1139,7 +1139,7 @@ img {
     linear-gradient(90deg, rgba(2, 11, 29, 0.97) 0%, rgba(2, 11, 29, 0.92) 42%, rgba(2, 11, 29, 0.74) 100%),
     radial-gradient(circle at 24% 36%, rgba(7, 94, 255, 0.16), transparent 32%),
     radial-gradient(circle at 86% 72%, rgba(122, 199, 12, 0.18), transparent 30%),
-    url("/bghero.png") center / cover no-repeat,
+    url("/bghero.webp") center / cover no-repeat,
     #020b1d;
 }
 
@@ -1250,12 +1250,49 @@ overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.88);
   border-radius: 1.35rem;
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.78), rgba(248, 250, 252, 0.7), rgba(255, 255, 255, 0.76));
+    linear-gradient(90deg, rgba(248, 250, 252, 0.94), rgba(241, 245, 249, 0.92), rgba(248, 250, 252, 0.94));
   box-shadow:
-    0 -12px 38px rgba(2, 11, 29, 0.12),
+    0 -8px 28px rgba(2, 11, 29, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(18px) saturate(125%);
-  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  contain: layout paint;
+}
+
+.clients-logo-track {
+  display: flex;
+  width: max-content;
+  animation: clientsTicker 52s linear infinite;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.clients-logo-list {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+@keyframes clientsTicker {
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@supports (content-visibility: auto) {
+  main > section:not(#home) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 900px;
+  }
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .clients-loop-backdrop {
+    background: rgba(248, 250, 252, 0.96);
+  }
+
+  .about-stats-glass {
+    background: rgba(248, 250, 252, 0.94);
+  }
 }
 
 .client-logo-wide {
@@ -1546,7 +1583,7 @@ overflow: hidden;
       radial-gradient(circle at 18% 8%, rgba(7, 94, 255, 0.16), transparent 42%),
       radial-gradient(circle at 76% 18%, rgba(122, 199, 12, 0.13), transparent 46%),
       linear-gradient(180deg, rgba(2, 11, 29, 0.76), rgba(2, 11, 29, 0.24) 72%, transparent);
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(10px);
     mask-image: linear-gradient(180deg, #000 0%, #000 62%, transparent 100%);
   }
 
@@ -1849,8 +1886,18 @@ overflow: hidden;
 /* Motion accessibility */
 @media (prefers-reduced-motion: reduce) {
   .hero-copy-ambient,
-  .hero-bubble {
+  .hero-bubble,
+  .clients-logo-track {
     animation: none;
+  }
+
+  .clients-logo-track {
+    transform: translate3d(0, 0, 0);
+    will-change: auto;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }
 

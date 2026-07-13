@@ -8,7 +8,7 @@ export default function HeroShowcase({ items }) {
       <div className="hero-showcase-spoke hero-showcase-spoke-4" aria-hidden="true" />
       <div className="hero-showcase-spoke hero-showcase-spoke-5" aria-hidden="true" />
       <div className="hero-showcase-center" aria-hidden="true">
-        <img src="/logo.svg" alt="" />
+        <img src="/logo.webp" alt="" decoding="async" />
       </div>
 
       {items.map((item, index) => {
@@ -17,7 +17,13 @@ export default function HeroShowcase({ items }) {
         return (
           <div key={item.title} className={`hero-showcase-item hero-showcase-item-${index + 1}`}>
             <div className="hero-showcase-panel">
-              <img src={item.image} alt="" />
+              <img
+                src={item.image}
+                alt=""
+                loading={index < 2 ? "eager" : "lazy"}
+                decoding="async"
+                fetchPriority={index === 0 ? "high" : "auto"}
+              />
             </div>
             <div className="hero-showcase-callout">
               <span className="hero-showcase-icon">

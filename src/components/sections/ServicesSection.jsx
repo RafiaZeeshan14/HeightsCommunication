@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { services } from "@/data/site";
 
 const cardDescriptions = [
@@ -23,7 +23,7 @@ export default function ServicesSection() {
 
       <div className="relative z-10 mx-auto max-w-[1800px]">
         <div>
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -45,11 +45,11 @@ export default function ServicesSection() {
               End-to-end solutions designed to elevate your brand, engage your audience,
               and drive <span className="text-lime-600">measurable results.</span>
             </p>
-          </motion.div>
+          </m.div>
 
         </div>
 
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.12 }}
@@ -59,7 +59,7 @@ export default function ServicesSection() {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <motion.article
+              <m.article
                 key={service.title}
                 variants={{
                   hidden: { opacity: 0, y: 38 },
@@ -93,10 +93,10 @@ export default function ServicesSection() {
                     </span>
                   </div>
                 </div>
-              </motion.article>
+              </m.article>
             );
           })}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

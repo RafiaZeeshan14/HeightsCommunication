@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { FaArrowRight, heroSlides, heroStats } from "@/data/site";
 import ButtonLink from "@/components/ui/ButtonLink";
 import HeroShowcase from "@/components/ui/HeroShowcase";
@@ -67,7 +67,7 @@ export default function HeroSection() {
 
       <div className="grid w-full gap-10 lg:grid-cols-[0.74fr_1.26fr] lg:items-center">
         {/* LEFT CONTENT */}
-        <motion.div
+        <m.div
           className="hero-copy relative z-10 text-center lg:text-left"
           variants={leftParent}
           initial="hidden"
@@ -77,31 +77,31 @@ export default function HeroSection() {
           <div className="hero-bubble hero-bubble-blue" aria-hidden="true" />
           <div className="hero-bubble hero-bubble-green" aria-hidden="true" />
 
-          <motion.p
+          <m.p
             className="text-xs font-bold uppercase tracking-[0.25em] text-[#7ac70c] sm:text-sm"
             variants={leftItem}
           >
             Since 2007
-          </motion.p>
+          </m.p>
 
-          <motion.h1
+          <m.h1
             className="mx-auto mt-5 max-w-[360px] text-[44px] font-bold leading-[1.02] sm:max-w-2xl sm:text-6xl lg:mx-0 lg:text-5xl xl:text-7xl"
             variants={leftItem}
           >
             Advertising <br />
             <span className="whitespace-nowrap">That Creates</span> <br />
             <span className="text-[#7ac70c]">Impact.</span>
-          </motion.h1>
+          </m.h1>
 
-          <motion.p
+          <m.p
             className="mx-auto mt-6 max-w-[350px] text-[15px] leading-7 text-white/82 sm:max-w-lg sm:text-base sm:leading-8 lg:mx-0"
             variants={leftItem}
           >
             Heights Communications delivers creative advertising, branding, and
             outdoor media solutions that help brands connect, engage and grow.
-          </motion.p>
+          </m.p>
 
-          <motion.div
+          <m.div
             className="mx-auto mt-8 flex max-w-[360px] flex-col gap-4 about me  lg:mx-0 lg:mt-9"
             variants={leftItem}
           >
@@ -109,11 +109,11 @@ export default function HeroSection() {
             <ButtonLink href="#portfolio" variant="outline">
               View Portfolio
             </ButtonLink>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
 
         {/* RIGHT CONTENT */}
-        <motion.div
+        <m.div
           className="hero-showcase-shell relative z-10 mx-auto min-h-[420px] w-full max-w-[380px] rounded-[32px] border border-white/10 bg-white/[0.03] p-4 shadow-[0_0_60px_rgba(37,99,235,0.12)] sm:max-w-[520px] lg:min-h-[570px] lg:max-w-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none"
           variants={rightShowcase}
           initial="hidden"
@@ -123,11 +123,11 @@ export default function HeroSection() {
           <div className="relative h-full">
             <HeroShowcase items={heroSlides} />
           </div>
-        </motion.div>
+        </m.div>
       </div>
 
       {/* STATS */}
-      <motion.div
+      <m.div
         className="hero-stats relative z-10 mt-10 w-full border-t border-white/15 pt-7 lg:mt-10"
         variants={statsParent}
         initial="hidden"
@@ -135,16 +135,16 @@ export default function HeroSection() {
       >
         <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-x-12 sm:gap-y-5 xl:gap-x-8">
           {heroStats.map((stat, index) => (
-            <motion.div
+            <m.div
               key={stat.label}
               variants={statItem}
               className="rounded-2xl border border-white/10 bg-white/[0.035] p-4 backdrop-blur-md sm:border-0 sm:bg-transparent sm:p-0 sm:backdrop-blur-0"
             >
               <StatItem isPrimary={index === 0} {...stat} />
-            </motion.div>
+            </m.div>
           ))}
         </div>
-      </motion.div>
+      </m.div>
 
       <a className="sr-only" href="#about">
         Next section <FaArrowRight aria-hidden="true" />

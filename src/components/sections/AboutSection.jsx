@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   FiAward,
   FiBarChart2,
@@ -71,7 +71,7 @@ export default function AboutSection() {
 
       <div className="relative mx-auto max-w-[1800px] px-5 sm:px-8 lg:px-12">
         <div className="grid items-center gap-12 xl:grid-cols-[0.86fr_1.18fr_0.9fr] xl:gap-8 2xl:gap-12">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -35 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -95,9 +95,9 @@ export default function AboutSection() {
               and flawless execution to deliver advertising that drives real results.
             </p>
 
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.92 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -108,7 +108,7 @@ export default function AboutSection() {
             <div className="absolute inset-[18%] rounded-full border border-dashed border-blue-300/60" />
             <div className="absolute inset-[27%] rounded-full border border-slate-200 shadow-[0_25px_80px_rgba(37,99,235,0.13)]" />
             <div className="absolute inset-[30%] flex items-center justify-center rounded-full bg-white shadow-[0_20px_55px_rgba(15,23,42,0.14)]">
-              <img src="/abtlogo.svg" alt="Heights Communications" className="w-[82%]" />
+              <img src="/abtlogo.webp" alt="Heights Communications" className="w-[82%]" loading="lazy" decoding="async" />
             </div>
 
             {orbitItems.map(({ label, icon: Icon, className, tone }) => {
@@ -122,9 +122,9 @@ export default function AboutSection() {
                 </div>
               );
             })}
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 35 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -134,7 +134,7 @@ export default function AboutSection() {
             {cards.map(({ icon: Icon, title, text, tone }, index) => {
               const theme = tones[tone];
               return (
-                <motion.div
+                <m.div
                   key={title}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -151,13 +151,13 @@ export default function AboutSection() {
                       <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
                     </div>
                   </div>
-                </motion.div>
+                </m.div>
               );
             })}
-          </motion.div>
+          </m.div>
         </div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 36, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, amount: 0.25 }}
@@ -167,7 +167,7 @@ export default function AboutSection() {
           {stats.map(({ icon: Icon, value, label, sub, tone }, index) => {
             const theme = tones[tone];
             return (
-              <motion.div
+              <m.div
                 key={value + label}
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -181,10 +181,10 @@ export default function AboutSection() {
                   <p className="text-sm font-semibold text-slate-700">{label}</p>
                   <p className="text-xs text-slate-500">{sub}</p>
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );
