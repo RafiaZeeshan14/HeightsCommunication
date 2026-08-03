@@ -1214,31 +1214,65 @@ img {
 
 .filter-pill {
   min-width: max-content;
-  height: 2.7rem;
-  border: 1px solid rgba(7, 94, 255, 0.16);
-  border-radius: 0.55rem;
-  padding-inline: 1.35rem;
+  height: 2.55rem;
+  border: 1px solid transparent;
+  border-radius: 0.65rem;
+  padding-inline: 1.15rem;
   color: #06122f;
-  background-color: rgba(255, 255, 255, 0.86);
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 251, 255, 0.84));
+  background: transparent;
   font-size: 0.78rem;
-  font-weight: 600;
-  box-shadow: 0 10px 28px rgba(15, 32, 60, 0.04);
-  transition: transform 180ms ease, background-color 180ms ease, background-image 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
-position: relative;
-overflow: hidden;
-
+  font-weight: 700;
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.filter-pill-active::before,
-.filter-pill:hover::before {
-  content: "";
-  position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 0;
-  height: 2px;
-  background: #7ac70c;
+.project-filter-bar {
+  width: fit-content;
+  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 0.4rem;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 34px rgba(15, 32, 60, 0.07);
+}
+
+.project-filter-select {
+  width: 100%;
+  height: 3.15rem;
+  appearance: none;
+  border: 1px solid rgba(7, 94, 255, 0.2);
+  border-radius: 0.75rem;
+  padding: 0 3rem 0 1rem;
+  color: #06122f;
+  background:
+    linear-gradient(45deg, transparent 50%, #075eff 50%) calc(100% - 1.25rem) 50% / 6px 6px no-repeat,
+    linear-gradient(135deg, #075eff 50%, transparent 50%) calc(100% - 0.9rem) 50% / 6px 6px no-repeat,
+    rgba(255, 255, 255, 0.96);
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 10px 28px rgba(15, 32, 60, 0.06);
+  outline: none;
+}
+
+.project-filter-select:focus {
+  border-color: rgba(7, 94, 255, 0.65);
+  box-shadow: 0 0 0 3px rgba(7, 94, 255, 0.1);
+}
+
+.filter-pill:hover {
+  color: #075eff;
+  background: rgba(7, 94, 255, 0.07);
+}
+
+.filter-pill-active,
+.filter-pill-active:hover {
+  color: #ffffff;
+  border-color: #075eff;
+  background: #075eff;
+  box-shadow: 0 8px 20px rgba(7, 94, 255, 0.2);
 }
 
 /* Clients and why-choose-us section */
@@ -1279,7 +1313,7 @@ overflow: hidden;
 }
 
 @supports (content-visibility: auto) {
-  main > section:not(#home) {
+  main > section:not(:first-child) {
     content-visibility: auto;
     contain-intrinsic-size: auto 900px;
   }
