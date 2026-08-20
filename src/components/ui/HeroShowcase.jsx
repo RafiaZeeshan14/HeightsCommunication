@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function HeroShowcase({ items }) {
   return (
     <div className="hero-showcase" aria-label="Heights Communications service showcase">
@@ -8,7 +10,7 @@ export default function HeroShowcase({ items }) {
       <div className="hero-showcase-spoke hero-showcase-spoke-4" aria-hidden="true" />
       <div className="hero-showcase-spoke hero-showcase-spoke-5" aria-hidden="true" />
       <div className="hero-showcase-center" aria-hidden="true">
-        <img src="/logo.webp" alt="" decoding="async" />
+        <Image src="/logo.webp" alt="" fill sizes="120px" />
       </div>
 
       {items.map((item, index) => {
@@ -17,12 +19,12 @@ export default function HeroShowcase({ items }) {
         return (
           <div key={item.title} className={`hero-showcase-item hero-showcase-item-${index + 1}`}>
             <div className="hero-showcase-panel">
-              <img
+              <Image
                 src={item.image}
                 alt=""
-                loading={index < 2 ? "eager" : "lazy"}
-                decoding="async"
-                fetchPriority={index === 0 ? "high" : "auto"}
+                fill
+                sizes="(max-width: 1029px) 320px, 28vw"
+                priority={index === 0}
               />
             </div>
             <div className="hero-showcase-callout">

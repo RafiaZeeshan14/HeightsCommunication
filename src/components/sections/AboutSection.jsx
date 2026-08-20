@@ -1,6 +1,7 @@
 "use client";
 
 import { m } from "framer-motion";
+import Image from "next/image";
 import {
   FiAward,
   FiBarChart2,
@@ -108,7 +109,7 @@ export default function AboutSection() {
             <div className="absolute inset-[18%] rounded-full border border-dashed border-blue-300/60" />
             <div className="absolute inset-[27%] rounded-full border border-slate-200 shadow-[0_25px_80px_rgba(37,99,235,0.13)]" />
             <div className="absolute inset-[30%] flex items-center justify-center rounded-full bg-white shadow-[0_20px_55px_rgba(15,23,42,0.14)]">
-              <img src="/abtlogo.webp" alt="Heights Communications" className="w-[82%]" loading="lazy" decoding="async" />
+              <Image src="/abtlogo.webp" alt="Heights Communications" className="w-[82%]" width={474} height={474} loading="lazy" />
             </div>
 
             {orbitItems.map(({ label, icon: Icon, className, tone }) => {

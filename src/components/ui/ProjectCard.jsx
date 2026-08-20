@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FiCalendar, FiMapPin, FiPlay } from "react-icons/fi";
 
 export default function ProjectCard({ project, onPlay }) {
@@ -10,12 +11,13 @@ export default function ProjectCard({ project, onPlay }) {
         aria-label={`Play ${project.title} video`}
       >
         <span className="relative block aspect-video overflow-hidden bg-[#020b1d]">
-          <img
+          <Image
             className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.06]"
             src={project.poster}
             alt=""
+            fill
+            sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
             loading="lazy"
-            decoding="async"
           />
           <span className="absolute inset-0 bg-gradient-to-t from-[#020b1d]/85 via-[#020b1d]/10 to-transparent" />
 

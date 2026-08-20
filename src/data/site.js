@@ -133,7 +133,7 @@ export const projects = [
     year: "2025",
     duration: "02:18",
     poster: "/suregala.png",
-    video: "/toyotasuregala.mp4",
+    video: "https://res.cloudinary.com/l92fw4gu/video/upload/toyotasuregala.mp4",
     description: "A polished Toyota product launch event managed from guest arrival to the final reveal, with coordinated production, impactful branding, product presentation and seamless on-ground support.",
     services: ["Event Production", "Branding", "Media Coverage"],
     featured: true,
