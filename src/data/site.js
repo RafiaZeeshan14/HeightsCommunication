@@ -164,6 +164,7 @@ export const projects = [
     video: "https://res.cloudinary.com/l92fw4gu/video/upload/v1787224596/Womensday.mp4",
     description: "A memorable Women's Day event delivered through thoughtful programming, guest coordination, branded experiences and seamless event-day management.",
     services: ["Concert Production", "Artist Management", "Audience Experience"],
+    featured: true,
   },
   // {
   //   slug: "toyota-creek-karting-competition",
