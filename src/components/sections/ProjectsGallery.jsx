@@ -36,7 +36,7 @@ export default function ProjectsGallery() {
             <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#5fa800]">Complete Portfolio</p>
             <h2 className="mt-3 text-3xl font-extrabold text-[#06122f] sm:text-4xl">Explore All Projects</h2>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600">
-              Browse our work by category and watch highlights from selected events and campaigns.
+              Browse our work by category and watch highlights from selected events and projects.
             </p>
           </div>
           <p className="text-sm font-semibold text-slate-500">

@@ -68,7 +68,7 @@ export const heroSlides = [
     image: "/herotoyota.png",
   },
   {
-    title: "Strategic Campaigns",
+    title: "Strategic Projects",
     text: "Data-driven strategies that deliver real results.",
     icon: HiOutlineRocketLaunch,
     image: "/kreek.png",
@@ -118,7 +118,7 @@ export const projectFilters = [
   "All Projects",
   "Corporate Events",
   "Product Launches",
-  "Outdoor Campaigns",
+  "Outdoor Project",
   "Activations",
   "Exhibitions",
 ];
@@ -184,7 +184,7 @@ export const projects = [
     slug: "cholistan-rally-dessert-roadshow",
     title: "Cholistan Rally Dessert Roadshow",
     client: "Toyota Motors",
-    category: "Outdoor Campaigns",
+    category: "Outdoor Projects",
     location: "Punjab, Pakistan",
     year: "2026",
     duration: "02:04",

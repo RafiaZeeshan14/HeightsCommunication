@@ -46,7 +46,7 @@ const cards = [
 
 const stats = [
   { icon: FiSmile, value: "200+", label: "Happy Clients", sub: "Across Pakistan", tone: "lime" },
-  { icon: FiPieChart, value: "500+", label: "Successful", sub: "Campaigns", tone: "blue" },
+  { icon: FiPieChart, value: "500+", label: "Successful", sub: "Projects", tone: "blue" },
   { icon: FiAward, value: "19+", label: "Years of", sub: "Excellence", tone: "purple" },
   { icon: FiGlobe, value: "30+", label: "Cities", sub: "Covered", tone: "lime" },
 ];

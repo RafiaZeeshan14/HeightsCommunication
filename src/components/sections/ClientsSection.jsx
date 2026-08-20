@@ -46,7 +46,7 @@ export default function ClientsSection() {
         <div className="hidden">
           <SectionHeading
             eyebrow="Why Choose Us"
-            title="We Deliver More Than Just Campaigns"
+            title="We Deliver More Than Just Projects"
             align="center"
           />
 

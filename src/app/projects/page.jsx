@@ -6,7 +6,7 @@ import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
 export const metadata = {
   title: "Projects | Heights Communications",
-  description: "Explore events, activations, launches and campaigns delivered by Heights Communications.",
+  description: "Explore events, activations, launches and projects delivered by Heights Communications.",
 };
 
 export default function ProjectsPage() {
