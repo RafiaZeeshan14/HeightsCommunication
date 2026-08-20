@@ -47,7 +47,7 @@ export const heroSlides = [
     title: "Outdoor Advertising",
     text: "High-impact visibility that builds brand recognition.",
     icon: HiOutlineMegaphone,
-    image: "/Rally.png",
+    image: "/rally.png",
   },
   {
     title: "Brand Activations",
@@ -147,7 +147,7 @@ export const projects = [
     year: "2025",
     duration: "01:46",
     poster: "/hinoconf.png",
-    video: "/hinodealerconference.mp4",
+    video: "https://res.cloudinary.com/l92fw4gu/image/upload/v1787224568/hinoconf.png",
     description: "A professionally managed dealer conference with smooth registration, engaging presentations and a well-coordinated corporate stage experience.",
     services: ["Stage Design", "AV Production", "Guest Management"],
     featured: true,
@@ -161,7 +161,7 @@ export const projects = [
     year: "2025",
     duration: "03:12",
     poster: "/wmnday.png",
-    video: "/Womensday.mp4",
+    video: "https://res.cloudinary.com/l92fw4gu/video/upload/v1787224596/Womensday.mp4",
     description: "A memorable Women's Day event delivered through thoughtful programming, guest coordination, branded experiences and seamless event-day management.",
     services: ["Concert Production", "Artist Management", "Audience Experience"],
   },
@@ -188,7 +188,7 @@ export const projects = [
     year: "2026",
     duration: "02:04",
     poster: "/Rally.png",
-    video: "/CholistanRally.mp4",
+    video: "https://res.cloudinary.com/l92fw4gu/video/upload/v1787224555/CholistanRally.mp4",
     description: "An adventurous automotive event brought together through route coordination, on-ground logistics, participant support and immersive brand storytelling.",
     services: ["Roadshow Management", "Outdoor Branding", "Lead Generation"],
   },
@@ -264,7 +264,7 @@ export const advantages = [
 
 export const contactDetails = [
   { icon: FaPhoneAlt, lines: [ "+92 323 2779999"] },
-  { icon: FaEnvelope, lines: ["info@heights.com.pk"] },
+  { icon: FaEnvelope, lines: ["info_heights@yahoo.com"] },
   { icon: FaMapMarkerAlt, lines: ["Office # 12, 2nd Floor,", "Blue Area, Islamabad"] },
 ];
 
