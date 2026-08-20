@@ -161,7 +161,7 @@ export const projects = [
     year: "2025",
     duration: "03:12",
     poster: "/wmnday.png",
-    video: "https://res.cloudinary.com/l92fw4gu/video/upload/v1787224596/Womensday.mp4",
+    video: "https://res.cloudinary.com/l92fw4gu/video/upload/v1787239999/womensday.mp4",
     description: "A memorable Women's Day event delivered through thoughtful programming, guest coordination, branded experiences and seamless event-day management.",
     services: ["Concert Production", "Artist Management", "Audience Experience"],
     featured: true,

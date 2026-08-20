@@ -1,4 +1,5 @@
 import Header from "@/components/layout/Header";
+import ClientsSection from "@/components/sections/ClientsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import ProjectsGallery from "@/components/sections/ProjectsGallery";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
@@ -31,6 +32,7 @@ export default function ProjectsPage() {
         <ContactSection />
       </main>
       <WhatsAppButton />
+      <ClientsSection />
     </>
   );
 }

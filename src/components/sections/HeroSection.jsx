@@ -133,7 +133,7 @@ export default function HeroSection() {
         initial="hidden"
         animate="show"
       >
-        <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-x-12 sm:gap-y-5 xl:gap-x-8">
+        <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-12 sm:gap-y-5 xl:gap-x-8">
           {heroStats.map((stat, index) => (
             <m.div
               key={stat.label}
