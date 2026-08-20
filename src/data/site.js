@@ -147,7 +147,7 @@ export const projects = [
     year: "2025",
     duration: "01:46",
     poster: "/hinoconf.png",
-    video: "https://res.cloudinary.com/l92fw4gu/video/upload/v1787229274/hino.mp4",
+    video: "https://res.cloudinary.com/l92fw4gu/video/upload/v1787236913/hino.mp4",
     description: "A professionally managed dealer conference with smooth registration, engaging presentations and a well-coordinated corporate stage experience.",
     services: ["Stage Design", "AV Production", "Guest Management"],
     featured: true,
@@ -248,7 +248,7 @@ export const advantages = [
     accent: "blue",
   },
   {
-    title: "1000+ CAMPAIGNS",
+    title: "500+ PROJECTS",
     text: "Successfully executed nationwide",
     icon: FaBullseye,
     color: "text-[#9be10c]",

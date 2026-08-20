@@ -26,7 +26,7 @@ const cards = [
   },
   {
     icon: FiUsers,
-    title: "500+ CAMPAIGNS",
+    title: "500+ PROJECTS",
     text: "Successfully executed campaigns across diverse industries with lasting impact.",
     tone: "blue",
   },

@@ -54,7 +54,7 @@ export default function ContactSection() {
             })}
           </div> */}
 
-          <p className="mt-7 text-xs leading-5 text-white/45">
+          <p className="contact-copyright mt-7 text-xs leading-5 text-white/45">
             &copy; 2026 Heights Communications.<br />All Rights Reserved.
           </p>
         </div>
