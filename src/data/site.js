@@ -211,7 +211,7 @@ export const clients = [
   { name: "Ghandhara", logo: "/ghandara.jpg" },
   { name: "KIA", logo: "/kia.png" },
   { name: "Honri", logo: "/honri.png" },
-  { name: "JAC", logo: "/jac.png" },
+  { name: "JAC", logo: "/JAClogo.png" },
   { name: "DIB", logo: "/dib.png" },
   { name: "pattex", logo: "/pattex.png" },
   { name: "pel", logo: "/pel.jpg" },
